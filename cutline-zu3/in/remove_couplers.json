@@ -1,0 +1,23 @@
+[
+  {
+    "title": "Zuchongzhi-83-28-without4couplers-and-q23-q47-q64-q76-q88",
+    "circuit_name_match_rule": "tn30_.*.txt$",
+    "remove_edges": [
+      [10, 18],
+      [31, 39],
+      [39, 47],
+      [69, 76]
+    ]
+  },
+  {
+    "title": "Final-Supremacy-83-28-without4couplers",
+    "circuit_name_match_rule": "sycamore.*.txt$",
+    "remove_edges": [
+      [10, 18],
+      [31, 39],
+      [39, 47],
+      [69, 76]
+    ]
+  }
+
+]

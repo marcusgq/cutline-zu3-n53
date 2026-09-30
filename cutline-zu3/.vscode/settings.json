@@ -1,0 +1,16 @@
+{
+    "files.associations": {
+        "*.tpl": "html",
+        "*.m": "matlab",
+        "*.mlog": "matlab",
+        "*.tex": "latex",
+        "xutility": "cpp",
+        "initializer_list": "cpp",
+        "type_traits": "cpp",
+        "vector": "cpp",
+        "xstring": "cpp",
+        "iostream": "cpp",
+        "ostream": "cpp"
+    },
+    "python.pythonPath": "E:\\workspace\\qos_python\\python365\\python.exe"
+}

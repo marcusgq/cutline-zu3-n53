@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="Permissions-Policy" content="interest-cohort=()">
+    <title>Demo</title>
+    <style id="patternColor">
+        
+    </style>
+</head>
+
+<body>
+    <div>
+        <div style="width: 500px;float: left;" id='insertHere'></div>
+        <!-- <br style="clear: both;"> -->
+        <div style="float: left;">
+<textarea name="blocklyinput" id="blocklyinput" cols="60" rows="27" spellcheck="false">
+    {
+        "type": "prog",
+        "xsize": "12",
+        "ysize": "9",
+        "use00": true,
+        "brokenBits": "[3]",
+        "part1": "[]",
+        "depth": "20",
+        "searchPattern": "01232301",
+        "errorRates": "[0.0016,0.0062,0.038]",
+        "removedEntrances": "[]",
+        "balancedRange": 6,
+        "search": "notprune",
+        "showMark": [
+            {
+                "type": "markQi"
+            }
+        ],
+        "showPattern": [
+            {
+                "type": "patternA",
+                "pattern": "A",
+                "color": "#ff9900"
+            },
+            {
+                "type": "patternA",
+                "pattern": "B",
+                "color": "#3333ff"
+            },
+            {
+                "type": "patternC",
+                "pattern": "C",
+                "color": "#009900"
+            },
+            {
+                "type": "patternC",
+                "pattern": "D",
+                "color": "#cc0000"
+            }
+        ],
+        "generatingCircuit": [
+            {
+                "type": "generatingCircuitNone"
+            }
+        ]
+    }
+</textarea>
+            <br>
+            <input type="button" id='Generate' onclick="buildMainSVG()" value="Generate">
+            <input type="button" id='Calculate' onclick="buildMainSVG();calculate()" value="Calculate">
+            <input type="button" id='Search' onclick="buildMainSVG();submit()" value="Search">
+            <input type="button" id='reRenderResult' onclick="reRenderResult(20)" value="ReRenderResult">
+            <input type="button" id='showCircuit' onclick="buildMainSVG();showCircuit()" value="showCircuit">
+        </div>
+        <br style="clear: both;">
+        <div id="blocklyDiv" style="height: 550px; width: 1000px;float: left;"></div>
+        <br style="clear: both;">
+        <details id='extra-base'>
+        <summary>extra content</summary>
+        <div id='extra-elided-search'>
+            <input type="button" value="load elided search" onclick="(function(){var s=document.createElement('script');s.src='one_shot_scripts/calCutLengthWithWedgeOfElided.js';s.onload=function(){pageInjectPart()};document.body.appendChild(s);})()">
+        </div>
+        <div id="extra-keepClickOrder">
+            <input type="button" value="keep Click Order" onclick="(function(){var s=document.createElement('script');s.src='one_shot_scripts/keepClickOrder.js';s.onload=function(){keepClickOrder()};document.body.appendChild(s);})()">
+        </div>
+        <div id='extra-html-content' style="width: 100%;height: 80vh;">
+            <iframe src="extra-content.html" frameborder="0" style="width: 100%;height: 100%;"></iframe>
+        </div>
+        </details>
+        <div id='resultlist' style="font-family:monospace;"></div>
+        <pre id='postresult' style="font-family:monospace;"></pre>
+        <hr>
+        <div id='resultlist2' style="font-family:monospace;"></div>
+        <pre id='formatedGateArray' style="font-family:monospace;"></pre>
+    </div>
+    <script src="random.js"></script>
+    <script src="util.js"></script>
+    <script src="main.js"></script>
+    <script src="page.js"></script>
+    <script src="antlr-blockly/blockly_compressed.js"></script>
+    <script src="antlr-blockly/blocks_compressed.js"></script>
+    <script src="antlr-blockly/javascript_compressed.js"></script>
+    <script src="antlr-blockly/zh-hans.js"></script>
+    <script src="CutlineInput.js"></script>
+
+</body>
+
+</html>
